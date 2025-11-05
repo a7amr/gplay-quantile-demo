@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Google Play Installs — Quantile Demo</title>
+  <style>
+    body{font-family:system-ui,Arial;margin:24px;max-width:900px}
+    .card{border:1px solid #ddd;border-radius:12px;padding:16px;margin-bottom:16px}
+    label{display:block;margin:6px 0 2px}
+    input,select,button{padding:8px;font-size:14px}
+    .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .muted{color:#666}
+    .out{white-space:pre-wrap;background:#f8f8f8;padding:12px;border-radius:8px;border:1px solid #eee}
+  </style>
+</head>
+<body>
+  <h2>Google Play Installs — Quantile (ONNX, client-side)</h2>
+  <div class="card">
+    <p class="muted">QuantileTransformer + probit is applied in the browser to match training.</p>
+    <div class="row">
+      <div><label>Category</label><input id="category" placeholder="e.g., art_and_design" /></div>
+      <div><label>Content Rating</label><input id="contentRating" placeholder="e.g., everyone" /></div>
+      <div><label>Genre (primary)</label><input id="genre" placeholder="e.g., art & design" /></div>
+      <div><label>Reviews (count)</label><input id="reviews" type="number" value="5000" /></div>
+      <div><label>Rating (0–5)</label><input id="rating" type="number" step="0.1" value="4.2" /></div>
+      <div><label>Size (MB)</label><input id="size" type="number" step="0.1" value="12" /></div>
+      <div><label>Price (USD)</label><input id="price" type="number" step="0.01" value="0" /></div>
+      <div><label>Paid?</label>
+        <select id="type"><option value="free">Free</option><option value="paid">Paid</option></select>
+      </div>
+    </div>
+    <div style="margin-top:12px">
+      <button id="predict">Predict installs</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="out" id="out">Ready.</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/ort.min.js"></script>
+  <script src="./app_quantile.js"></script>
+</body>
+</html>

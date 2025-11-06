@@ -54,6 +54,14 @@ function cdfFromQuantiles(v, q){
 }
 
 async function loadAll(){
+  // Ensure ORT wasm assets resolve when deployed (e.g., GitHub Pages)
+  try{
+    if (typeof ort !== 'undefined' && ort.env && ort.env.wasm){
+      ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/';
+      ort.env.wasm.numThreads = 1; // avoid cross-origin isolation requirements
+      ort.env.wasm.proxy = false;
+    }
+  }catch{}
   meta = await (await fetch('./meta_quantile.json')).json();
   sess = await ort.InferenceSession.create('./gplay_loginstalls_quantile.onnx');
   log('Loaded model + quantiles.');

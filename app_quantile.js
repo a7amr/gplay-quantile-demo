@@ -2,6 +2,9 @@
 let sess, meta;
 // If a smoke case is loaded, use its Kaggle y_pred to display in the main panel
 let yPredOverride = null;
+let inSmokeMode = false;
+// Charts (Chart.js)
+let chParity = null, chErr = null;
 
 function lower(s){ return (s||"").toString().trim().toLowerCase(); }
 function clamp01(p){ return Math.min(1-1e-12, Math.max(1e-12, p)); }
@@ -136,10 +139,72 @@ function toBucket(v){
   return best;
 }
 
+// --- Charts (Chart.js) -----------------------------------------------------
+function makeParityChart(yPred, yTrue) {
+  const ctx = document.getElementById('chartParity');
+  if (!ctx || typeof Chart === 'undefined') return;
+  const maxv = Math.max(...yPred, ...yTrue);
+  const diag = Array.from({ length: 20 }, (_, i) => (i / 19) * maxv);
+  if (chParity) chParity.destroy();
+  chParity = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [
+        {
+          label: 'y_pred vs y_true',
+          data: yPred.map((yp, i) => ({ x: yTrue[i], y: yp })),
+          pointRadius: 2
+        },
+        {
+          label: 'y = x',
+          type: 'line',
+          data: diag.map(v => ({ x: v, y: v })),
+          borderWidth: 1,
+          fill: false,
+          pointRadius: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom' } },
+      scales: {
+        x: { title: { text: 'y_true (installs)', display: true } },
+        y: { title: { text: 'y_pred (installs)', display: true } }
+      }
+    }
+  });
+}
+
+function makeErrHist(errAbs) {
+  const ctx = document.getElementById('chartErr');
+  if (!ctx || typeof Chart === 'undefined') return;
+  const edges = [0, 10, 50, 100, 500, 1e3, 5e3, 1e4, 5e4, 1e5, 5e5, 1e6, 5e6, 1e7, 5e7];
+  const counts = new Array(edges.length - 1).fill(0);
+  for (const e of errAbs) {
+    const i = edges.findIndex((v, idx) => e >= v && e < edges[idx + 1]);
+    const j = i === -1 ? counts.length - 1 : i;
+    if (j >= 0 && j < counts.length) counts[j]++;
+  }
+  const labels = edges.slice(0, -1).map((v, i) => `${edges[i].toLocaleString()}–${edges[i + 1].toLocaleString()}`);
+  if (chErr) chErr.destroy();
+  chErr = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ label: '|error|', data: counts }] },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { maxRotation: 45, minRotation: 45 } } }
+    }
+  });
+}
+
 async function predict(){
   try{
     const installs = await predictInstalls();
-    const shown = (typeof yPredOverride === 'number' && isFinite(yPredOverride)) ? yPredOverride : installs;
+    const shown = (inSmokeMode && typeof yPredOverride === 'number' && isFinite(yPredOverride)) ? yPredOverride : installs;
     const bucket = toBucket(shown);
     const html = [
       `<div class="big">${Math.round(shown).toLocaleString()}</div>`,
@@ -188,9 +253,9 @@ function fillFormFromRaw(raw){
     if (el) el.value = val ?? '';
   };
 
-  set('category',       raw?.['Category'] ?? '');
-  set('contentRating',  raw?.['Content Rating'] ?? '');
-  set('genre',          raw?.['Genres'] ?? '');
+  set('category',       lower(raw?.['Category'] ?? ''));
+  set('contentRating',  lower(raw?.['Content Rating'] ?? ''));
+  set('genre',          lower(raw?.['Genres'] ?? ''));
   set('reviews',        raw?.['Reviews'] ?? '');
   set('rating',         isFinite(raw?.['Rating']) ? raw['Rating'] : '');
 
@@ -215,8 +280,9 @@ function fillFormFromRaw(raw){
 async function runSmoke(){
   const s = await fetchJsonLenient('./smoke.json');
   fillFormFromRaw(s.raw || {});
+  inSmokeMode = true;
   // display Kaggle y_pred on the main card for this smoke run
-  yPredOverride = (typeof s.y_pred === 'number' && isFinite(s.y_pred)) ? s.y_pred : null;
+  yPredOverride = Number.isFinite(s.y_pred) ? s.y_pred : null;
 
   // refresh main card now that override is set
   await predict();
@@ -236,6 +302,7 @@ async function runSmoke(){
 
 // When the user clicks Predict, clear any smoke override so we show the page prediction.
 document.getElementById('predict').addEventListener('click', async () => {
+  inSmokeMode = false;      // leave smoke mode
   yPredOverride = null;     // important: don't keep showing smoke y_pred
   await predict();
 });
@@ -250,6 +317,17 @@ let smokeIdx = 0;
 async function loadSmokeLarge(){
   if (SMOKE.length) return;
   SMOKE = await fetchJsonLenient('./smoke_large.json');
+}
+
+// Build charts from the full smoke set once available
+async function initChartsFromSmoke(){
+  await loadSmokeLarge();
+  if(!SMOKE.length) return;
+  const yPred = SMOKE.map(c => Number(c.y_pred));
+  const yTrue = SMOKE.map(c => Number(c.y_true));
+  const errAbs = yPred.map((p,i)=> Math.abs(p - yTrue[i]));
+  makeParityChart(yPred, yTrue);
+  makeErrHist(errAbs);
 }
 
 async function predictFromForm(){
@@ -267,6 +345,7 @@ async function nextSmokeCase(){
     }
     const c = SMOKE[smokeIdx++ % SMOKE.length];
     // Ensure the main panel shows Kaggle y_pred for this case
+    inSmokeMode = true;
     yPredOverride = (typeof c.y_pred === 'number' && isFinite(c.y_pred)) ? c.y_pred : null;
     fillFormFromRaw(c.raw || {});
     // Refresh the main card now (this was missing)
@@ -302,4 +381,13 @@ async function nextSmokeCase(){
 
 const btnMany = document.getElementById('btn-smoke-many');
 if (btnMany) btnMany.addEventListener('click', nextSmokeCase);
-loadAll();
+// Exit smoke mode on any manual input edit
+['category','contentRating','genre','reviews','rating','size','price','type']
+  .forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const exitSmoke = () => { inSmokeMode = false; yPredOverride = null; };
+    el.addEventListener('input', exitSmoke);
+    el.addEventListener('change', exitSmoke);
+  });
+loadAll().then(initChartsFromSmoke);

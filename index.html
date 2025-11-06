@@ -4,31 +4,99 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Google Play Installs — Quantile Demo</title>
-  <style>
-    body{font-family:system-ui,Arial;margin:24px;max-width:900px}
-    .card{border:1px solid #ddd;border-radius:12px;padding:16px;margin-bottom:16px}
-    label{display:block;margin:6px 0 2px}
-    input,select,button{padding:8px;font-size:14px}
-    .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .muted{color:#666}
-    .out{white-space:pre-wrap;background:#f8f8f8;padding:12px;border-radius:8px;border:1px solid #eee}
-    .big{font-size:1.4rem;font-weight:700}
-    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#eef;color:#223;border:1px solid #dde}
-    .stats{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:baseline}
-    .stat-label{color:#555}
-    .stat-value{font-weight:600}
-    .delta-pos{color:#0a7}
-    .delta-neg{color:#c33}
-  </style>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <h2>Google Play Installs — Quantile (ONNX, client-side)</h2>
   <div class="card">
     <p class="muted">QuantileTransformer + probit is applied in the browser to match training.</p>
     <div class="row">
-      <div><label>Category</label><input id="category" placeholder="e.g., art_and_design" /></div>
-      <div><label>Content Rating</label><input id="contentRating" placeholder="e.g., everyone" /></div>
-      <div><label>Genre (primary)</label><input id="genre" placeholder="e.g., art & design" /></div>
+      <div>
+        <label>Category</label>
+        <select id="category">
+          <option value="">Choose…</option>
+          <option value="art_and_design">Art & design</option>
+          <option value="auto_and_vehicles">Auto & vehicles</option>
+          <option value="books_and_reference">Books & reference</option>
+          <option value="business">Business</option>
+          <option value="communication">Communication</option>
+          <option value="dating">Dating</option>
+          <option value="education">Education</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="events">Events</option>
+          <option value="family">Family</option>
+          <option value="finance">Finance</option>
+          <option value="food_and_drink">Food & drink</option>
+          <option value="game">Game</option>
+          <option value="health_and_fitness">Health & fitness</option>
+          <option value="house_and_home">House & home</option>
+          <option value="libraries_and_demo">Libraries & demo</option>
+          <option value="lifestyle">Lifestyle</option>
+          <option value="maps_and_navigation">Maps & navigation</option>
+          <option value="medical">Medical</option>
+          <option value="news_and_magazines">News & magazines</option>
+          <option value="personalization">Personalization</option>
+          <option value="photography">Photography</option>
+          <option value="productivity">Productivity</option>
+          <option value="shopping">Shopping</option>
+          <option value="social">Social</option>
+          <option value="sports">Sports</option>
+          <option value="tools">Tools</option>
+          <option value="travel_and_local">Travel & local</option>
+          <option value="video_players">Video players</option>
+          <option value="weather">Weather</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label>Content Rating</label>
+        <select id="contentRating">
+          <option value="">Choose…</option>
+          <option value="everyone">Everyone</option>
+          <option value="everyone 10+">Everyone 10+</option>
+          <option value="teen">Teen</option>
+          <option value="mature 17+">Mature 17+</option>
+          <option value="adults only 18+">Adults only 18+</option>
+          <option value="unrated">Unrated</option>
+        </select>
+      </div>
+      <div>
+        <label>Genre (primary)</label>
+        <select id="genre">
+          <option value="">Choose…</option>
+          <option value="action">Action</option>
+          <option value="arcade">Arcade</option>
+          <option value="books & reference">Books & reference</option>
+          <option value="business">Business</option>
+          <option value="casual">Casual</option>
+          <option value="communication">Communication</option>
+          <option value="dating">Dating</option>
+          <option value="education">Education</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="finance">Finance</option>
+          <option value="food & drink">Food & drink</option>
+          <option value="health & fitness">Health & fitness</option>
+          <option value="lifestyle">Lifestyle</option>
+          <option value="maps & navigation">Maps & navigation</option>
+          <option value="medical">Medical</option>
+          <option value="news & magazines">News & magazines</option>
+          <option value="personalization">Personalization</option>
+          <option value="photography">Photography</option>
+          <option value="productivity">Productivity</option>
+          <option value="puzzle">Puzzle</option>
+          <option value="racing">Racing</option>
+          <option value="role playing">Role playing</option>
+          <option value="shopping">Shopping</option>
+          <option value="simulation">Simulation</option>
+          <option value="social">Social</option>
+          <option value="sports">Sports</option>
+          <option value="strategy">Strategy</option>
+          <option value="tools">Tools</option>
+          <option value="travel & local">Travel & local</option>
+          <option value="video players & editors">Video players & editors</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
       <div><label>Reviews (count)</label><input id="reviews" type="number" value="5000" /></div>
       <div><label>Rating (0–5)</label><input id="rating" type="number" step="0.1" value="4.2" /></div>
       <div><label>Size (MB)</label><input id="size" type="number" step="0.1" value="12" /></div>
@@ -38,10 +106,10 @@
       </div>
     </div>
     <div style="margin-top:12px">
-      <button id="predict">Predict installs</button>
+      <button id="predict" class="btn btn-primary">Predict installs</button>
     </div>
     <div style="margin-top:12px">
-      <button id="btn-smoke-many" type="button">Next smoke case</button>
+      <button id="btn-smoke-many" type="button" class="btn">Next smoke case</button>
       <div class="muted">Cycles through cases from smoke_large.json.</div>
       <div id="smoke-many-out" class="out"></div>
     </div>
@@ -51,6 +119,40 @@
     <div class="out" id="out">Ready.</div>
   </div>
 
+  <!-- Charts -->
+  <div class="card">
+    <h3 style="margin-top:0">Model diagnostics (from smoke set)</h3>
+    <div class="row">
+      <div>
+        <div class="chart-box"><canvas id="chartParity"></canvas></div>
+        <div class="muted chart-caption">Parity: y_pred vs y_true</div>
+      </div>
+      <div>
+        <div class="chart-box"><canvas id="chartErr"></canvas></div>
+        <div class="muted chart-caption">Absolute error distribution |y_pred − y_true|</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="card">
+    <h3>What is this?</h3>
+    <p class="muted">
+      This demo predicts a Google Play app’s install count using a neural network trained in PyTorch and exported to
+      <strong>ONNX</strong>. All inference runs <em>in your browser</em> with onnxruntime-web no server needed.
+    </p>
+    <h4>How it works</h4>
+    <ul>
+      <li>We parse your inputs (category, genre, reviews, rating, size, price, paid/free) and one-hot encode categories.</li>
+      <li>Numeric fields are transformed with the same <strong>QuantileTransformer → probit</strong> scaling used in training (medians & quantiles were exported from the notebook).</li>
+      <li>The ONNX model outputs <code>log(installs)</code>; we convert it back to installs and show the nearest Google Play bucket.</li>
+      <li><strong>Smoke mode:</strong> when you load a smoke case, the big card shows the notebook’s saved
+        <code>y_pred</code> for that exact row. Outside smoke mode, it shows the page’s live prediction.</li>
+    </ul>
+    <p class="muted">Everything is computed locally your data never leaves the page.</p>
+  </section>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/ort.min.js"></script>
   <script src="./app_quantile.js"></script>
 </body>

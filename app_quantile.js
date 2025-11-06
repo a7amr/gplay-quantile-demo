@@ -143,6 +143,11 @@ function toBucket(v){
 function makeParityChart(yPred, yTrue) {
   const ctx = document.getElementById('chartParity');
   if (!ctx || typeof Chart === 'undefined') return;
+  const css = getComputedStyle(document.documentElement);
+  const colText = (css.getPropertyValue('--muted') || '#94a3b8').trim();
+  const gridCol = 'rgba(148,163,184,0.25)';
+  const primary = (css.getPropertyValue('--primary') || '#3b82f6').trim();
+  const diagCol = (css.getPropertyValue('--primary-600') || '#2563eb').trim();
   const maxv = Math.max(...yPred, ...yTrue);
   const diag = Array.from({ length: 20 }, (_, i) => (i / 19) * maxv);
   if (chParity) chParity.destroy();
@@ -153,13 +158,16 @@ function makeParityChart(yPred, yTrue) {
         {
           label: 'y_pred vs y_true',
           data: yPred.map((yp, i) => ({ x: yTrue[i], y: yp })),
-          pointRadius: 2
+          pointRadius: 2,
+          pointBackgroundColor: primary,
+          borderColor: primary
         },
         {
           label: 'y = x',
           type: 'line',
           data: diag.map(v => ({ x: v, y: v })),
           borderWidth: 1,
+          borderColor: diagCol,
           fill: false,
           pointRadius: 0
         }
@@ -168,10 +176,10 @@ function makeParityChart(yPred, yTrue) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { position: 'bottom' } },
+      plugins: { legend: { position: 'bottom', labels: { color: colText } } },
       scales: {
-        x: { title: { text: 'y_true (installs)', display: true } },
-        y: { title: { text: 'y_pred (installs)', display: true } }
+        x: { title: { text: 'y_true (installs)', display: true, color: colText }, ticks: { color: colText }, grid: { color: gridCol } },
+        y: { title: { text: 'y_pred (installs)', display: true, color: colText }, ticks: { color: colText }, grid: { color: gridCol } }
       }
     }
   });
@@ -180,6 +188,10 @@ function makeParityChart(yPred, yTrue) {
 function makeErrHist(errAbs) {
   const ctx = document.getElementById('chartErr');
   if (!ctx || typeof Chart === 'undefined') return;
+  const css = getComputedStyle(document.documentElement);
+  const colText = (css.getPropertyValue('--muted') || '#94a3b8').trim();
+  const gridCol = 'rgba(148,163,184,0.25)';
+  const primary = (css.getPropertyValue('--primary') || '#3b82f6').trim();
   const edges = [0, 10, 50, 100, 500, 1e3, 5e3, 1e4, 5e4, 1e5, 5e5, 1e6, 5e6, 1e7, 5e7];
   const counts = new Array(edges.length - 1).fill(0);
   for (const e of errAbs) {
@@ -191,12 +203,15 @@ function makeErrHist(errAbs) {
   if (chErr) chErr.destroy();
   chErr = new Chart(ctx, {
     type: 'bar',
-    data: { labels, datasets: [{ label: '|error|', data: counts }] },
+    data: { labels, datasets: [{ label: '|error|', data: counts, backgroundColor: primary, borderColor: primary }] },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: { legend: { display: false } },
-      scales: { x: { ticks: { maxRotation: 45, minRotation: 45 } } }
+      scales: {
+        x: { ticks: { maxRotation: 45, minRotation: 45, color: colText }, grid: { color: gridCol } },
+        y: { ticks: { color: colText }, grid: { color: gridCol } }
+      }
     }
   });
 }

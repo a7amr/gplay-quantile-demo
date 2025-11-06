@@ -142,11 +142,8 @@ async function predict(){
     const shown = (typeof yPredOverride === 'number' && isFinite(yPredOverride)) ? yPredOverride : installs;
     const bucket = toBucket(shown);
     const html = [
-<<<<<<< ours
       `<div class="big">${Math.round(shown).toLocaleString()}</div>`,
-=======
-      `<div class="big">${Math.round(installs).toLocaleString()}</div>`,
->>>>>>> theirs
+      
       `<div class="muted">Predicted installs</div>`,
       `<div style="margin-top:6px">Nearest bucket: <span class="pill">${bucket.toLocaleString()}+</span></div>`
     ].join('');
@@ -214,26 +211,34 @@ function fillFormFromRaw(raw){
   set('type', type);
 }
 
-// Fill form from smoke.json, run prediction, and compare vs Kaggle values
+// --- single-case smoke test (smoke.json) --------------------------------
 async function runSmoke(){
   const s = await fetchJsonLenient('./smoke.json');
   fillFormFromRaw(s.raw || {});
-  // Override displayed value with this case's Kaggle y_pred
+  // display Kaggle y_pred on the main card for this smoke run
   yPredOverride = (typeof s.y_pred === 'number' && isFinite(s.y_pred)) ? s.y_pred : null;
 
-  const pred = await predictInstalls();
+  // refresh main card now that override is set
+  await predict();
+
+  // also show detailed comparison text
+  const pagePred = await predictInstalls();
   const out  = [
-    `Page prediction  : ${Math.round(pred).toLocaleString()}`,
+    `Page prediction  : ${Math.round(pagePred).toLocaleString()}`,
     `Kaggle y_pred    : ${Math.round(s.y_pred).toLocaleString()}`,
     `Kaggle y_true    : ${Math.round(s.y_true).toLocaleString()}`,
-    `abs err vs y_pred: ${Math.abs(pred - s.y_pred).toLocaleString()}`,
-    `abs % vs y_pred  : ${(100*Math.abs(pred-s.y_pred)/Math.max(1,s.y_pred)).toFixed(2)}%`
-  ].join("\n");
+    `abs err vs y_pred: ${Math.abs(pagePred - s.y_pred).toLocaleString()}`,
+    `abs % vs y_pred  : ${(100*Math.abs(pagePred-s.y_pred)/Math.max(1,s.y_pred)).toFixed(2)}%`
+  ].join('\n');
   const outEl = document.getElementById('smoke-out');
   if (outEl) outEl.textContent = out;
 }
 
-document.getElementById('predict').addEventListener('click', predict);
+// When the user clicks Predict, clear any smoke override so we show the page prediction.
+document.getElementById('predict').addEventListener('click', async () => {
+  yPredOverride = null;     // important: don't keep showing smoke y_pred
+  await predict();
+});
 {
   const btnSmoke = document.getElementById('btn-smoke');
   if (btnSmoke) btnSmoke.addEventListener('click', runSmoke);
@@ -264,6 +269,8 @@ async function nextSmokeCase(){
     // Ensure the main panel shows Kaggle y_pred for this case
     yPredOverride = (typeof c.y_pred === 'number' && isFinite(c.y_pred)) ? c.y_pred : null;
     fillFormFromRaw(c.raw || {});
+    // Refresh the main card now (this was missing)
+    await predict();
     const y = await predictFromForm();
     // Delta based on Kaggle y_pred vs y_true (not page prediction)
     const delta = c.y_pred - c.y_true;
@@ -271,19 +278,22 @@ async function nextSmokeCase(){
     const absDelta = Math.abs(Math.round(delta)).toLocaleString();
     const pct = (100 * Math.abs(delta) / Math.max(1, c.y_pred)).toFixed(2);
     const cls = delta >= 0 ? 'delta-pos' : 'delta-neg';
+    const sgn = delta >= 0 ? '+' : '-';
     const html = `
       <div class="stats">
         <div class="stat-label">Case</div><div class="stat-value">#${c.id}</div>
         <div class="stat-label">y_pred</div><div class="stat-value">${Math.round(c.y_pred).toLocaleString()}</div>
         <div class="stat-label">y_true</div><div class="stat-value">${Math.round(c.y_true).toLocaleString()}</div>
-        <div class="stat-label">Delta</div><div class="stat-value"><span class="${cls}">${sign}${absDelta} (${sign}${pct}%)</span></div>
+        <div class="stat-label">Delta</div><div class="stat-value"><span class="${cls}">${sgn}${absDelta} (${sgn}${pct}%)</span></div>
       </div>`;
     if(outEl){
       outEl.innerHTML = html;
-      // keep the raw prediction for debugging (not displayed)
-      outEl.dataset.prediction = String(Math.round(y));
+      // keep the page prediction for debugging (not displayed)
+      const pagePred = await predictInstalls();
+      outEl.dataset.prediction = String(Math.round(pagePred));
     }
-    console.debug('smoke-large case', c.id, { prediction: y, y_pred: c.y_pred, y_true: c.y_true, delta });
+    const pagePredDebug = await predictInstalls();
+    console.debug('smoke-large case', c.id, { prediction: pagePredDebug, y_pred: c.y_pred, y_true: c.y_true, delta });
   }catch(e){
     if(outEl) outEl.textContent = 'Smoke-many error: ' + e.message;
     console.error(e);

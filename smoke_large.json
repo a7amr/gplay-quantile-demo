@@ -1,0 +1,3002 @@
+[
+  {
+    "id": 1962,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone 10+",
+      "Genres": "Action",
+      "Reviews": "3073251",
+      "Rating": 4.6,
+      "Size": "33M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 49999988.0,
+    "y_pred": 48826836.0
+  },
+  {
+    "id": 4500,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Arcade",
+      "Reviews": "13788",
+      "Rating": 4.3,
+      "Size": "55M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1190626.625
+  },
+  {
+    "id": 2931,
+    "raw": {
+      "Category": "PHOTOGRAPHY",
+      "Content Rating": "Everyone",
+      "Genres": "Photography",
+      "Reviews": "2163282",
+      "Rating": 4.7,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 49999988.0,
+    "y_pred": 54326464.0
+  },
+  {
+    "id": 8280,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 78.88145446777344
+  },
+  {
+    "id": 7633,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "12",
+      "Rating": 1.9,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 914.85546875
+  },
+  {
+    "id": 4168,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Everyone",
+      "Genres": "Lifestyle",
+      "Reviews": "543",
+      "Rating": 3.0,
+      "Size": "94M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 41496.1875
+  },
+  {
+    "id": 10650,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "5M",
+      "Price": "$5.49",
+      "Type": "Paid"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 16.40309715270996
+  },
+  {
+    "id": 699,
+    "raw": {
+      "Category": "EDUCATION",
+      "Content Rating": "Everyone",
+      "Genres": "Education;Education",
+      "Reviews": "6289924",
+      "Rating": 4.7,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000024.0,
+    "y_pred": 108201112.0
+  },
+  {
+    "id": 8287,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Everyone",
+      "Genres": "Lifestyle",
+      "Reviews": "1",
+      "Rating": 5.0,
+      "Size": "1M",
+      "Price": "$3.04",
+      "Type": "Paid"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 14.820978164672852
+  },
+  {
+    "id": 10745,
+    "raw": {
+      "Category": "FINANCE",
+      "Content Rating": "Everyone",
+      "Genres": "Finance",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "6M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1.0,
+    "y_pred": 46.39527893066406
+  },
+  {
+    "id": 7084,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "12M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 3.9212989807128906
+  },
+  {
+    "id": 10581,
+    "raw": {
+      "Category": "WEATHER",
+      "Content Rating": "Everyone",
+      "Genres": "Weather",
+      "Reviews": "116",
+      "Rating": 3.8,
+      "Size": "36M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 14091.5146484375
+  },
+  {
+    "id": 3445,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "647844",
+      "Rating": 4.3,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 16976762.0
+  },
+  {
+    "id": 3269,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "14552",
+      "Rating": 3.9,
+      "Size": "17M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 1398306.375
+  },
+  {
+    "id": 9344,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "7993",
+      "Rating": 3.3,
+      "Size": "51M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1163931.25
+  },
+  {
+    "id": 6303,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Casual",
+      "Reviews": "344383",
+      "Rating": 4.4,
+      "Size": "30M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 9466669.0
+  },
+  {
+    "id": 7478,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "7",
+      "Rating": 5.0,
+      "Size": "15M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 130.08717346191406
+  },
+  {
+    "id": 4471,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "4M",
+      "Price": "$1.49",
+      "Type": "Paid"
+    },
+    "y_true": 1.0,
+    "y_pred": 1.94588041305542
+  },
+  {
+    "id": 1218,
+    "raw": {
+      "Category": "FOOD_AND_DRINK",
+      "Content Rating": "Everyone",
+      "Genres": "Food & Drink",
+      "Reviews": "11707",
+      "Rating": 4.6,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 670199.875
+  },
+  {
+    "id": 10451,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "154",
+      "Rating": 3.5,
+      "Size": "3M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 15708.9013671875
+  },
+  {
+    "id": 10544,
+    "raw": {
+      "Category": "SPORTS",
+      "Content Rating": "Everyone",
+      "Genres": "Sports",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "26M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 6.424483776092529
+  },
+  {
+    "id": 173,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "8342",
+      "Rating": 4.2,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 686448.0
+  },
+  {
+    "id": 1439,
+    "raw": {
+      "Category": "HEALTH_AND_FITNESS",
+      "Content Rating": "Everyone",
+      "Genres": "Health & Fitness",
+      "Reviews": "111462",
+      "Rating": 4.1,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 8141849.5
+  },
+  {
+    "id": 1049,
+    "raw": {
+      "Category": "FINANCE",
+      "Content Rating": "Everyone",
+      "Genres": "Finance",
+      "Reviews": "39041",
+      "Rating": 4.4,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1352521.875
+  },
+  {
+    "id": 3384,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "43960",
+      "Rating": 4.4,
+      "Size": "10M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 2556944.5
+  },
+  {
+    "id": 8638,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Racing",
+      "Reviews": "154108",
+      "Rating": 4.0,
+      "Size": "78M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 5538043.5
+  },
+  {
+    "id": 3198,
+    "raw": {
+      "Category": "TRAVEL_AND_LOCAL",
+      "Content Rating": "Teen",
+      "Genres": "Travel & Local",
+      "Reviews": "61776",
+      "Rating": 4.4,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 3134164.0
+  },
+  {
+    "id": 5877,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "227",
+      "Rating": 4.6,
+      "Size": "11M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 9636.9326171875
+  },
+  {
+    "id": 7209,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "45",
+      "Rating": 4.2,
+      "Size": "24M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 4076.26171875
+  },
+  {
+    "id": 5953,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Educational",
+      "Reviews": "1424",
+      "Rating": 4.7,
+      "Size": "19M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 52524.7890625
+  },
+  {
+    "id": 5771,
+    "raw": {
+      "Category": "NEWS_AND_MAGAZINES",
+      "Content Rating": "Everyone",
+      "Genres": "News & Magazines",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "1M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 41.24289321899414
+  },
+  {
+    "id": 5443,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Simulation",
+      "Reviews": "31596",
+      "Rating": 2.9,
+      "Size": "31M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 1095429.75
+  },
+  {
+    "id": 7234,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "10M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5.0,
+    "y_pred": 16.205495834350586
+  },
+  {
+    "id": 7334,
+    "raw": {
+      "Category": "NEWS_AND_MAGAZINES",
+      "Content Rating": "Everyone",
+      "Genres": "News & Magazines",
+      "Reviews": "45",
+      "Rating": 3.9,
+      "Size": "15M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 4157.23388671875
+  },
+  {
+    "id": 639,
+    "raw": {
+      "Category": "DATING",
+      "Content Rating": "Everyone",
+      "Genres": "Dating",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "19M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 21.31541633605957
+  },
+  {
+    "id": 10640,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "14",
+      "Rating": 3.9,
+      "Size": "11M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 540.9476318359375
+  },
+  {
+    "id": 4873,
+    "raw": {
+      "Category": "HEALTH_AND_FITNESS",
+      "Content Rating": "Everyone",
+      "Genres": "Health & Fitness",
+      "Reviews": "37224",
+      "Rating": 4.6,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1140704.875
+  },
+  {
+    "id": 9269,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "208",
+      "Rating": 3.5,
+      "Size": "13M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 17126.404296875
+  },
+  {
+    "id": 4978,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Everyone",
+      "Genres": "Lifestyle",
+      "Reviews": "317",
+      "Rating": 4.4,
+      "Size": "0M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 31787.244140625
+  },
+  {
+    "id": 10594,
+    "raw": {
+      "Category": "SPORTS",
+      "Content Rating": "Everyone",
+      "Genres": "Sports",
+      "Reviews": "340",
+      "Rating": 4.3,
+      "Size": "15M",
+      "Price": "$1.99",
+      "Type": "Paid"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 4901.8173828125
+  },
+  {
+    "id": 3997,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "1531",
+      "Rating": 4.2,
+      "Size": "8M",
+      "Price": "$2.99",
+      "Type": "Paid"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 20112.130859375
+  },
+  {
+    "id": 7716,
+    "raw": {
+      "Category": "TRAVEL_AND_LOCAL",
+      "Content Rating": "Everyone",
+      "Genres": "Travel & Local",
+      "Reviews": "15",
+      "Rating": 4.3,
+      "Size": "14M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 1038.156494140625
+  },
+  {
+    "id": 6826,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Teen",
+      "Genres": "Lifestyle",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "5M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 15.745627403259277
+  },
+  {
+    "id": 7531,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Everyone",
+      "Genres": "Lifestyle",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "25M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 26.674596786499023
+  },
+  {
+    "id": 9855,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Simulation",
+      "Reviews": "174215",
+      "Rating": 4.5,
+      "Size": "93M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 4176748.0
+  },
+  {
+    "id": 10548,
+    "raw": {
+      "Category": "SPORTS",
+      "Content Rating": "Everyone",
+      "Genres": "Sports",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "26M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 14.012955665588379
+  },
+  {
+    "id": 4571,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "47",
+      "Rating": 4.1,
+      "Size": "0M",
+      "Price": "$4.99",
+      "Type": "Paid"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 966.90087890625
+  },
+  {
+    "id": 9445,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment;Action & Adventure",
+      "Reviews": "13731",
+      "Rating": 4.1,
+      "Size": "55M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1042265.125
+  },
+  {
+    "id": 6531,
+    "raw": {
+      "Category": "LIBRARIES_AND_DEMO",
+      "Content Rating": "Everyone",
+      "Genres": "Libraries & Demo",
+      "Reviews": "63",
+      "Rating": 4.4,
+      "Size": "0M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 5780.46630859375
+  },
+  {
+    "id": 178,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "1065",
+      "Rating": 4.6,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 114942.3828125
+  },
+  {
+    "id": 194,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "1002861",
+      "Rating": 4.3,
+      "Size": "35M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000024.0,
+    "y_pred": 29020572.0
+  },
+  {
+    "id": 9025,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 173.11004638671875
+  },
+  {
+    "id": 2287,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "4207",
+      "Rating": 4.4,
+      "Size": "",
+      "Price": "$3.99",
+      "Type": "Paid"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 38245.8671875
+  },
+  {
+    "id": 2576,
+    "raw": {
+      "Category": "SOCIAL",
+      "Content Rating": "Everyone",
+      "Genres": "Social",
+      "Reviews": "231325",
+      "Rating": 4.3,
+      "Size": "5M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 6414338.0
+  },
+  {
+    "id": 7543,
+    "raw": {
+      "Category": "COMMUNICATION",
+      "Content Rating": "Everyone",
+      "Genres": "Communication",
+      "Reviews": "71740",
+      "Rating": 4.6,
+      "Size": "6M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 1519581.0
+  },
+  {
+    "id": 6366,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "14M",
+      "Price": "$4.85",
+      "Type": "Paid"
+    },
+    "y_true": 50.0,
+    "y_pred": 22.878698348999023
+  },
+  {
+    "id": 3743,
+    "raw": {
+      "Category": "NEWS_AND_MAGAZINES",
+      "Content Rating": "Everyone 10+",
+      "Genres": "News & Magazines",
+      "Reviews": "18818",
+      "Rating": 3.8,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1441418.5
+  },
+  {
+    "id": 10011,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone 10+",
+      "Genres": "Strategy",
+      "Reviews": "9513",
+      "Rating": 3.8,
+      "Size": "82M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 721890.25
+  },
+  {
+    "id": 8551,
+    "raw": {
+      "Category": "SOCIAL",
+      "Content Rating": "Teen",
+      "Genres": "Social",
+      "Reviews": "44",
+      "Rating": 3.4,
+      "Size": "6M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 6387.65185546875
+  },
+  {
+    "id": 3313,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "24265",
+      "Rating": 4.4,
+      "Size": "3M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1817771.125
+  },
+  {
+    "id": 9287,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education;Education",
+      "Reviews": "2",
+      "Rating": 3.0,
+      "Size": "9M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 186.32228088378906
+  },
+  {
+    "id": 7452,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Simulation",
+      "Reviews": "9403",
+      "Rating": 4.2,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 787129.25
+  },
+  {
+    "id": 6220,
+    "raw": {
+      "Category": "SHOPPING",
+      "Content Rating": "Everyone",
+      "Genres": "Shopping",
+      "Reviews": "17180",
+      "Rating": 4.6,
+      "Size": "31M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1146149.625
+  },
+  {
+    "id": 4579,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "22503",
+      "Rating": 4.4,
+      "Size": "6M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1950124.25
+  },
+  {
+    "id": 3033,
+    "raw": {
+      "Category": "SPORTS",
+      "Content Rating": "Everyone",
+      "Genres": "Sports",
+      "Reviews": "7543",
+      "Rating": 4.3,
+      "Size": "25M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 356634.53125
+  },
+  {
+    "id": 2882,
+    "raw": {
+      "Category": "PHOTOGRAPHY",
+      "Content Rating": "Everyone",
+      "Genres": "Photography",
+      "Reviews": "111066",
+      "Rating": 4.4,
+      "Size": "74M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 9170249.0
+  },
+  {
+    "id": 8043,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment",
+      "Reviews": "63",
+      "Rating": 4.4,
+      "Size": "8M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 3674.337158203125
+  },
+  {
+    "id": 2451,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 3.077916145324707
+  },
+  {
+    "id": 10493,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Casual;Pretend Play",
+      "Reviews": "30668",
+      "Rating": 4.3,
+      "Size": "33M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 2119856.0
+  },
+  {
+    "id": 10344,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 11.677258491516113
+  },
+  {
+    "id": 535,
+    "raw": {
+      "Category": "DATING",
+      "Content Rating": "Mature 17+",
+      "Genres": "Dating",
+      "Reviews": "57081",
+      "Rating": 4.2,
+      "Size": "8M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1585701.25
+  },
+  {
+    "id": 8896,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "13479633",
+      "Rating": 4.5,
+      "Size": "14M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000024.0,
+    "y_pred": 152063312.0
+  },
+  {
+    "id": 7736,
+    "raw": {
+      "Category": "COMMUNICATION",
+      "Content Rating": "Everyone",
+      "Genres": "Communication",
+      "Reviews": "192",
+      "Rating": 4.5,
+      "Size": "15M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 9461.3681640625
+  },
+  {
+    "id": 9434,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Casual",
+      "Reviews": "209",
+      "Rating": 3.6,
+      "Size": "16M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 18845.650390625
+  },
+  {
+    "id": 9628,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "200214",
+      "Rating": 4.1,
+      "Size": "18M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 7177869.5
+  },
+  {
+    "id": 6371,
+    "raw": {
+      "Category": "FOOD_AND_DRINK",
+      "Content Rating": "Teen",
+      "Genres": "Food & Drink",
+      "Reviews": "41",
+      "Rating": 4.5,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 1782.256591796875
+  },
+  {
+    "id": 3460,
+    "raw": {
+      "Category": "PRODUCTIVITY",
+      "Content Rating": "Everyone",
+      "Genres": "Productivity",
+      "Reviews": "11200",
+      "Rating": 3.2,
+      "Size": "11M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 1968553.875
+  },
+  {
+    "id": 1563,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Everyone",
+      "Genres": "Lifestyle",
+      "Reviews": "47497",
+      "Rating": 4.1,
+      "Size": "34M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 3973245.75
+  },
+  {
+    "id": 8842,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "2",
+      "Rating": NaN,
+      "Size": "1M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 63.69928741455078
+  },
+  {
+    "id": 8824,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Casual",
+      "Reviews": "15",
+      "Rating": 4.9,
+      "Size": "23M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 273.5423889160156
+  },
+  {
+    "id": 1548,
+    "raw": {
+      "Category": "LIBRARIES_AND_DEMO",
+      "Content Rating": "Everyone",
+      "Genres": "Libraries & Demo",
+      "Reviews": "1919",
+      "Rating": 3.2,
+      "Size": "8M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 188943.578125
+  },
+  {
+    "id": 2690,
+    "raw": {
+      "Category": "SHOPPING",
+      "Content Rating": "Everyone",
+      "Genres": "Shopping",
+      "Reviews": "109124",
+      "Rating": 4.3,
+      "Size": "22M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 6914644.0
+  },
+  {
+    "id": 298,
+    "raw": {
+      "Category": "COMICS",
+      "Content Rating": "Adults only 18+",
+      "Genres": "Comics",
+      "Reviews": "24005",
+      "Rating": 4.6,
+      "Size": "5M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 794219.5
+  },
+  {
+    "id": 6398,
+    "raw": {
+      "Category": "FINANCE",
+      "Content Rating": "Everyone",
+      "Genres": "Finance",
+      "Reviews": "4",
+      "Rating": 5.0,
+      "Size": "11M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50.0,
+    "y_pred": 75.21501922607422
+  },
+  {
+    "id": 7629,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference;Creativity",
+      "Reviews": "9",
+      "Rating": NaN,
+      "Size": "77M",
+      "Price": "$2.99",
+      "Type": "Paid"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 179.04258728027344
+  },
+  {
+    "id": 7444,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "1",
+      "Rating": 5.0,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 30.846689224243164
+  },
+  {
+    "id": 10379,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Racing",
+      "Reviews": "20364",
+      "Rating": 4.2,
+      "Size": "45M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 1401409.0
+  },
+  {
+    "id": 1093,
+    "raw": {
+      "Category": "FINANCE",
+      "Content Rating": "Everyone",
+      "Genres": "Finance",
+      "Reviews": "8188",
+      "Rating": 4.5,
+      "Size": "22M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 443675.3125
+  },
+  {
+    "id": 7171,
+    "raw": {
+      "Category": "SPORTS",
+      "Content Rating": "Everyone",
+      "Genres": "Sports",
+      "Reviews": "6",
+      "Rating": NaN,
+      "Size": "16M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 199.6995086669922
+  },
+  {
+    "id": 5888,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Education",
+      "Reviews": "12",
+      "Rating": 4.8,
+      "Size": "8M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 652.2623901367188
+  },
+  {
+    "id": 5928,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education;Education",
+      "Reviews": "226",
+      "Rating": 4.5,
+      "Size": "26M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 14983.7607421875
+  },
+  {
+    "id": 5835,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Mature 17+",
+      "Genres": "Entertainment",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "42M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 30.42203140258789
+  },
+  {
+    "id": 1213,
+    "raw": {
+      "Category": "FOOD_AND_DRINK",
+      "Content Rating": "Everyone",
+      "Genres": "Food & Drink",
+      "Reviews": "1726",
+      "Rating": 3.3,
+      "Size": "30M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 193309.9375
+  },
+  {
+    "id": 1932,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone 10+",
+      "Genres": "Action",
+      "Reviews": "10979062",
+      "Rating": 4.6,
+      "Size": "88M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000024.0,
+    "y_pred": 105050488.0
+  },
+  {
+    "id": 6721,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Arcade",
+      "Reviews": "13304",
+      "Rating": 4.1,
+      "Size": "1M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1066959.375
+  },
+  {
+    "id": 1201,
+    "raw": {
+      "Category": "FOOD_AND_DRINK",
+      "Content Rating": "Everyone",
+      "Genres": "Food & Drink",
+      "Reviews": "151080",
+      "Rating": 4.3,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 7634706.0
+  },
+  {
+    "id": 10674,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "5M",
+      "Price": "$5.49",
+      "Type": "Paid"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 7.741018295288086
+  },
+  {
+    "id": 2482,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "1",
+      "Rating": 4.0,
+      "Size": "3M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 54.52634811401367
+  },
+  {
+    "id": 7618,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Adventure",
+      "Reviews": "4107",
+      "Rating": 4.1,
+      "Size": "40M",
+      "Price": "$4.99",
+      "Type": "Paid"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 64218.58984375
+  },
+  {
+    "id": 7059,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment",
+      "Reviews": "12",
+      "Rating": 4.2,
+      "Size": "13M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 1065.3402099609375
+  },
+  {
+    "id": 1375,
+    "raw": {
+      "Category": "HEALTH_AND_FITNESS",
+      "Content Rating": "Everyone",
+      "Genres": "Health & Fitness",
+      "Reviews": "117176",
+      "Rating": 4.6,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 4512211.0
+  },
+  {
+    "id": 9471,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Simulation",
+      "Reviews": "35989",
+      "Rating": 3.9,
+      "Size": "46M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1104917.625
+  },
+  {
+    "id": 10709,
+    "raw": {
+      "Category": "COMMUNICATION",
+      "Content Rating": "Everyone",
+      "Genres": "Communication",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "17M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 35.162960052490234
+  },
+  {
+    "id": 8656,
+    "raw": {
+      "Category": "PRODUCTIVITY",
+      "Content Rating": "Everyone",
+      "Genres": "Productivity",
+      "Reviews": "2537",
+      "Rating": 4.2,
+      "Size": "8M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 184237.46875
+  },
+  {
+    "id": 1553,
+    "raw": {
+      "Category": "LIBRARIES_AND_DEMO",
+      "Content Rating": "Everyone",
+      "Genres": "Libraries & Demo",
+      "Reviews": "20145",
+      "Rating": 4.1,
+      "Size": "0M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1280302.5
+  },
+  {
+    "id": 6532,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "250",
+      "Rating": 1.9,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 24386.5625
+  },
+  {
+    "id": 8931,
+    "raw": {
+      "Category": "VIDEO_PLAYERS",
+      "Content Rating": "Everyone",
+      "Genres": "Video Players & Editors",
+      "Reviews": "321",
+      "Rating": 3.7,
+      "Size": "1M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 43079.5078125
+  },
+  {
+    "id": 2306,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "27524",
+      "Rating": 4.4,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1022158.5
+  },
+  {
+    "id": 1791,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Teen",
+      "Genres": "Arcade",
+      "Reviews": "145353",
+      "Rating": 4.2,
+      "Size": "85M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 6248129.0
+  },
+  {
+    "id": 6516,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "146",
+      "Rating": 4.7,
+      "Size": "34M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 5282.01025390625
+  },
+  {
+    "id": 9006,
+    "raw": {
+      "Category": "NEWS_AND_MAGAZINES",
+      "Content Rating": "Everyone",
+      "Genres": "News & Magazines",
+      "Reviews": "3375",
+      "Rating": 4.4,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 229617.46875
+  },
+  {
+    "id": 9104,
+    "raw": {
+      "Category": "FINANCE",
+      "Content Rating": "Everyone",
+      "Genres": "Finance",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "14M",
+      "Price": "$28.99",
+      "Type": "Paid"
+    },
+    "y_true": 1.0,
+    "y_pred": 1.5639921426773071
+  },
+  {
+    "id": 9100,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "187",
+      "Rating": 4.4,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 10303.8291015625
+  },
+  {
+    "id": 8836,
+    "raw": {
+      "Category": "MAPS_AND_NAVIGATION",
+      "Content Rating": "Everyone",
+      "Genres": "Maps & Navigation",
+      "Reviews": "22382",
+      "Rating": 3.9,
+      "Size": "7M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1933703.125
+  },
+  {
+    "id": 7363,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Trivia",
+      "Reviews": "35",
+      "Rating": 4.8,
+      "Size": "3M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 1831.7479248046875
+  },
+  {
+    "id": 10058,
+    "raw": {
+      "Category": "WEATHER",
+      "Content Rating": "Everyone",
+      "Genres": "Weather",
+      "Reviews": "11510",
+      "Rating": 4.2,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 649132.875
+  },
+  {
+    "id": 8301,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "191621",
+      "Rating": 4.3,
+      "Size": "6M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 7992264.5
+  },
+  {
+    "id": 4257,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Puzzle",
+      "Reviews": "2122705",
+      "Rating": 4.4,
+      "Size": "49M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000024.0,
+    "y_pred": 69120312.0
+  },
+  {
+    "id": 10248,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "761",
+      "Rating": 4.4,
+      "Size": "11M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 60677.328125
+  },
+  {
+    "id": 5818,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Action",
+      "Reviews": "6344",
+      "Rating": 4.6,
+      "Size": "32M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 257804.8125
+  },
+  {
+    "id": 3350,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "172990",
+      "Rating": 4.1,
+      "Size": "1M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 8406390.0
+  },
+  {
+    "id": 5379,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone 10+",
+      "Genres": "Strategy",
+      "Reviews": "33944",
+      "Rating": 3.5,
+      "Size": "28M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1043617.8125
+  },
+  {
+    "id": 5492,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Role Playing",
+      "Reviews": "22667",
+      "Rating": 4.3,
+      "Size": "35M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 742750.625
+  },
+  {
+    "id": 9260,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "13",
+      "Rating": 4.1,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 744.346435546875
+  },
+  {
+    "id": 4894,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment",
+      "Reviews": "9",
+      "Rating": NaN,
+      "Size": "22M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 268.12469482421875
+  },
+  {
+    "id": 2464,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "28",
+      "Rating": 4.9,
+      "Size": "6M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 688.213134765625
+  },
+  {
+    "id": 4380,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "2538",
+      "Rating": 4.3,
+      "Size": "6M",
+      "Price": "$2.99",
+      "Type": "Paid"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 46537.77734375
+  },
+  {
+    "id": 7988,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Entertainment",
+      "Reviews": "16391",
+      "Rating": 4.5,
+      "Size": "13M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 738804.3125
+  },
+  {
+    "id": 4735,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "65",
+      "Rating": 4.7,
+      "Size": "8M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 4468.64208984375
+  },
+  {
+    "id": 5326,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Entertainment",
+      "Reviews": "9952",
+      "Rating": 4.6,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 165903.390625
+  },
+  {
+    "id": 1608,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Everyone",
+      "Genres": "Lifestyle",
+      "Reviews": "49147",
+      "Rating": 4.1,
+      "Size": "13M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 4387684.5
+  },
+  {
+    "id": 10432,
+    "raw": {
+      "Category": "COMMUNICATION",
+      "Content Rating": "Everyone",
+      "Genres": "Communication",
+      "Reviews": "5",
+      "Rating": NaN,
+      "Size": "26M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 141.9413299560547
+  },
+  {
+    "id": 3626,
+    "raw": {
+      "Category": "WEATHER",
+      "Content Rating": "Everyone",
+      "Genres": "Weather",
+      "Reviews": "1558437",
+      "Rating": 4.4,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 49999988.0,
+    "y_pred": 40854440.0
+  },
+  {
+    "id": 6412,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Role Playing",
+      "Reviews": "8419",
+      "Rating": 3.9,
+      "Size": "47M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 579771.75
+  },
+  {
+    "id": 6490,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "1",
+      "Rating": 1.0,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 117.30052185058594
+  },
+  {
+    "id": 3352,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "1121805",
+      "Rating": 4.6,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 49999988.0,
+    "y_pred": 20567718.0
+  },
+  {
+    "id": 10059,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Casual",
+      "Reviews": "3258",
+      "Rating": 3.7,
+      "Size": "26M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 253309.515625
+  },
+  {
+    "id": 6151,
+    "raw": {
+      "Category": "AUTO_AND_VEHICLES",
+      "Content Rating": "Everyone",
+      "Genres": "Auto & Vehicles",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "9M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 25.22759437561035
+  },
+  {
+    "id": 7981,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "4",
+      "Rating": NaN,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 177.5627899169922
+  },
+  {
+    "id": 3643,
+    "raw": {
+      "Category": "WEATHER",
+      "Content Rating": "Everyone",
+      "Genres": "Weather",
+      "Reviews": "13426",
+      "Rating": 4.5,
+      "Size": "19M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 938025.5
+  },
+  {
+    "id": 5765,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "114",
+      "Rating": 4.7,
+      "Size": "9M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 3112.30126953125
+  },
+  {
+    "id": 4242,
+    "raw": {
+      "Category": "SOCIAL",
+      "Content Rating": "Everyone",
+      "Genres": "Social",
+      "Reviews": "896118",
+      "Rating": 4.7,
+      "Size": "7M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 10934272.0
+  },
+  {
+    "id": 1208,
+    "raw": {
+      "Category": "FOOD_AND_DRINK",
+      "Content Rating": "Everyone",
+      "Genres": "Food & Drink",
+      "Reviews": "30224",
+      "Rating": 4.3,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1585584.75
+  },
+  {
+    "id": 7250,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "5",
+      "Rating": 3.4,
+      "Size": "21M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 362.7804870605469
+  },
+  {
+    "id": 6655,
+    "raw": {
+      "Category": "FOOD_AND_DRINK",
+      "Content Rating": "Everyone",
+      "Genres": "Food & Drink",
+      "Reviews": "3",
+      "Rating": 3.7,
+      "Size": "27M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 288.684326171875
+  },
+  {
+    "id": 4054,
+    "raw": {
+      "Category": "SPORTS",
+      "Content Rating": "Everyone",
+      "Genres": "Sports",
+      "Reviews": "1076243",
+      "Rating": 4.1,
+      "Size": "13M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000024.0,
+    "y_pred": 49197964.0
+  },
+  {
+    "id": 7442,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "3",
+      "Rating": 5.0,
+      "Size": "9M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 105.81676483154297
+  },
+  {
+    "id": 1838,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Teen",
+      "Genres": "Role Playing",
+      "Reviews": "38207",
+      "Rating": 4.5,
+      "Size": "15M",
+      "Price": "$9.99",
+      "Type": "Paid"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 149528.0625
+  },
+  {
+    "id": 2261,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "15",
+      "Rating": 4.0,
+      "Size": "5M",
+      "Price": "$14.99",
+      "Type": "Paid"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 588.2479858398438
+  },
+  {
+    "id": 6180,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Teen",
+      "Genres": "Role Playing",
+      "Reviews": "20101",
+      "Rating": 4.5,
+      "Size": "8M",
+      "Price": "$9.99",
+      "Type": "Paid"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 56107.43359375
+  },
+  {
+    "id": 8142,
+    "raw": {
+      "Category": "SOCIAL",
+      "Content Rating": "Mature 17+",
+      "Genres": "Social",
+      "Reviews": "398",
+      "Rating": 3.2,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 51453.02734375
+  },
+  {
+    "id": 1687,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Casual;Creativity",
+      "Reviews": "68057",
+      "Rating": 4.1,
+      "Size": "85M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 3912008.0
+  },
+  {
+    "id": 7212,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "22",
+      "Rating": 5.0,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 884.976318359375
+  },
+  {
+    "id": 10364,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Puzzle",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "5M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 38.57478332519531
+  },
+  {
+    "id": 9614,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone 10+",
+      "Genres": "Action",
+      "Reviews": "291941",
+      "Rating": 4.6,
+      "Size": "90M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 9259340.0
+  },
+  {
+    "id": 9459,
+    "raw": {
+      "Category": "LIFESTYLE",
+      "Content Rating": "Teen",
+      "Genres": "Lifestyle",
+      "Reviews": "9",
+      "Rating": NaN,
+      "Size": "7M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 582.37109375
+  },
+  {
+    "id": 2614,
+    "raw": {
+      "Category": "SOCIAL",
+      "Content Rating": "Mature 17+",
+      "Genres": "Social",
+      "Reviews": "1064049",
+      "Rating": 4.3,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 49999988.0,
+    "y_pred": 30593424.0
+  },
+  {
+    "id": 10258,
+    "raw": {
+      "Category": "SPORTS",
+      "Content Rating": "Everyone",
+      "Genres": "Sports",
+      "Reviews": "195",
+      "Rating": 4.9,
+      "Size": "29M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 2875.75
+  },
+  {
+    "id": 7223,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "113951",
+      "Rating": 4.4,
+      "Size": "1M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 4588253.5
+  },
+  {
+    "id": 973,
+    "raw": {
+      "Category": "ENTERTAINMENT",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment",
+      "Reviews": "115033",
+      "Rating": 4.1,
+      "Size": "30M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 6435992.5
+  },
+  {
+    "id": 6675,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone 10+",
+      "Genres": "Role Playing",
+      "Reviews": "21804",
+      "Rating": 4.3,
+      "Size": "44M",
+      "Price": "$0.99",
+      "Type": "Paid"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 289543.1875
+  },
+  {
+    "id": 6182,
+    "raw": {
+      "Category": "SHOPPING",
+      "Content Rating": "Everyone",
+      "Genres": "Shopping",
+      "Reviews": "28",
+      "Rating": NaN,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 1080.0357666015625
+  },
+  {
+    "id": 6958,
+    "raw": {
+      "Category": "FINANCE",
+      "Content Rating": "Everyone",
+      "Genres": "Finance",
+      "Reviews": "19",
+      "Rating": 2.9,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 2785.543212890625
+  },
+  {
+    "id": 4472,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "53",
+      "Rating": 3.6,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 6834.1650390625
+  },
+  {
+    "id": 7092,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 37.169376373291016
+  },
+  {
+    "id": 5217,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Mature 17+",
+      "Genres": "Tools",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "8M",
+      "Price": "$2.99",
+      "Type": "Paid"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 7.8185648918151855
+  },
+  {
+    "id": 254,
+    "raw": {
+      "Category": "BUSINESS",
+      "Content Rating": "Everyone",
+      "Genres": "Business",
+      "Reviews": "16422",
+      "Rating": 4.2,
+      "Size": "28M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1474498.0
+  },
+  {
+    "id": 10635,
+    "raw": {
+      "Category": "NEWS_AND_MAGAZINES",
+      "Content Rating": "Everyone",
+      "Genres": "News & Magazines",
+      "Reviews": "89",
+      "Rating": 4.6,
+      "Size": "6M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 4999.99951171875,
+    "y_pred": 5919.4443359375
+  },
+  {
+    "id": 7636,
+    "raw": {
+      "Category": "SHOPPING",
+      "Content Rating": "Everyone",
+      "Genres": "Shopping",
+      "Reviews": "8",
+      "Rating": 1.6,
+      "Size": "18M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 470.8013610839844
+  },
+  {
+    "id": 6867,
+    "raw": {
+      "Category": "SHOPPING",
+      "Content Rating": "Everyone",
+      "Genres": "Shopping",
+      "Reviews": "6",
+      "Rating": 4.0,
+      "Size": "20M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 256.01446533203125
+  },
+  {
+    "id": 10483,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Teen",
+      "Genres": "Personalization",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "16M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 54.69316482543945
+  },
+  {
+    "id": 7301,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment",
+      "Reviews": "34",
+      "Rating": 4.2,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 3152.733154296875
+  },
+  {
+    "id": 2586,
+    "raw": {
+      "Category": "SOCIAL",
+      "Content Rating": "Everyone",
+      "Genres": "Social",
+      "Reviews": "83488",
+      "Rating": 4.2,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 6619100.0
+  },
+  {
+    "id": 4008,
+    "raw": {
+      "Category": "PRODUCTIVITY",
+      "Content Rating": "Everyone",
+      "Genres": "Productivity",
+      "Reviews": "499",
+      "Rating": 4.0,
+      "Size": "5M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 47601.21875
+  },
+  {
+    "id": 6048,
+    "raw": {
+      "Category": "NEWS_AND_MAGAZINES",
+      "Content Rating": "Everyone",
+      "Genres": "News & Magazines",
+      "Reviews": "13",
+      "Rating": 4.9,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 384.5224304199219
+  },
+  {
+    "id": 9249,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "12M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50.0,
+    "y_pred": 19.00065803527832
+  },
+  {
+    "id": 10788,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "1",
+      "Rating": NaN,
+      "Size": "20M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 52.48130798339844
+  },
+  {
+    "id": 5791,
+    "raw": {
+      "Category": "VIDEO_PLAYERS",
+      "Content Rating": "Everyone",
+      "Genres": "Video Players & Editors",
+      "Reviews": "569",
+      "Rating": 4.4,
+      "Size": "3M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50000.0078125,
+    "y_pred": 30360.5234375
+  },
+  {
+    "id": 740,
+    "raw": {
+      "Category": "EDUCATION",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "211856",
+      "Rating": 4.6,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 6568980.0
+  },
+  {
+    "id": 10055,
+    "raw": {
+      "Category": "HEALTH_AND_FITNESS",
+      "Content Rating": "Everyone",
+      "Genres": "Health & Fitness",
+      "Reviews": "8",
+      "Rating": 3.5,
+      "Size": "8M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 605.8897705078125
+  },
+  {
+    "id": 1359,
+    "raw": {
+      "Category": "HEALTH_AND_FITNESS",
+      "Content Rating": "Everyone",
+      "Genres": "Health & Fitness",
+      "Reviews": "40296",
+      "Rating": 4.5,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 1933225.5
+  },
+  {
+    "id": 7567,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Everyone",
+      "Genres": "Personalization",
+      "Reviews": "2910",
+      "Rating": 4.3,
+      "Size": "2M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 172825.3125
+  },
+  {
+    "id": 2669,
+    "raw": {
+      "Category": "SHOPPING",
+      "Content Rating": "Everyone",
+      "Genres": "Shopping",
+      "Reviews": "106798",
+      "Rating": 4.2,
+      "Size": "30M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 7673451.5
+  },
+  {
+    "id": 2283,
+    "raw": {
+      "Category": "MEDICAL",
+      "Content Rating": "Everyone",
+      "Genres": "Medical",
+      "Reviews": "133",
+      "Rating": 4.5,
+      "Size": "3M",
+      "Price": "$2.99",
+      "Type": "Paid"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 2876.445556640625
+  },
+  {
+    "id": 6642,
+    "raw": {
+      "Category": "NEWS_AND_MAGAZINES",
+      "Content Rating": "Everyone",
+      "Genres": "News & Magazines",
+      "Reviews": "2",
+      "Rating": NaN,
+      "Size": "9M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 50.0,
+    "y_pred": 78.13768005371094
+  },
+  {
+    "id": 2006,
+    "raw": {
+      "Category": "GAME",
+      "Content Rating": "Everyone",
+      "Genres": "Arcade",
+      "Reviews": "260651",
+      "Rating": 4.6,
+      "Size": "51M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 9999996.0,
+    "y_pred": 10995340.0
+  },
+  {
+    "id": 6183,
+    "raw": {
+      "Category": "HEALTH_AND_FITNESS",
+      "Content Rating": "Everyone",
+      "Genres": "Health & Fitness",
+      "Reviews": "10",
+      "Rating": 4.8,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 729.3030395507812
+  },
+  {
+    "id": 9335,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "6547",
+      "Rating": 4.7,
+      "Size": "16M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 195209.40625
+  },
+  {
+    "id": 10487,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Simulation",
+      "Reviews": "15",
+      "Rating": 4.5,
+      "Size": "46M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000.0000610351562,
+    "y_pred": 751.2267456054688
+  },
+  {
+    "id": 8073,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "6060",
+      "Rating": 3.6,
+      "Size": "1M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 629661.75
+  },
+  {
+    "id": 3689,
+    "raw": {
+      "Category": "VIDEO_PLAYERS",
+      "Content Rating": "Everyone",
+      "Genres": "Video Players & Editors",
+      "Reviews": "5639",
+      "Rating": 3.6,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 867184.3125
+  },
+  {
+    "id": 5202,
+    "raw": {
+      "Category": "PHOTOGRAPHY",
+      "Content Rating": "Everyone",
+      "Genres": "Photography",
+      "Reviews": "529",
+      "Rating": 4.0,
+      "Size": "",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 66199.8515625
+  },
+  {
+    "id": 6817,
+    "raw": {
+      "Category": "TRAVEL_AND_LOCAL",
+      "Content Rating": "Everyone",
+      "Genres": "Travel & Local",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "18M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 99.99998474121094,
+    "y_pred": 23.40313720703125
+  },
+  {
+    "id": 2028,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Casual;Brain Games",
+      "Reviews": "2150",
+      "Rating": 4.5,
+      "Size": "20M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 499999.8125,
+    "y_pred": 193898.921875
+  },
+  {
+    "id": 7346,
+    "raw": {
+      "Category": "BOOKS_AND_REFERENCE",
+      "Content Rating": "Everyone",
+      "Genres": "Books & Reference",
+      "Reviews": "0",
+      "Rating": NaN,
+      "Size": "1M",
+      "Price": "$1.96",
+      "Type": "Paid"
+    },
+    "y_true": 10.000000953674316,
+    "y_pred": 5.161252498626709
+  },
+  {
+    "id": 5741,
+    "raw": {
+      "Category": "TOOLS",
+      "Content Rating": "Everyone",
+      "Genres": "Tools",
+      "Reviews": "2158",
+      "Rating": 4.3,
+      "Size": "3M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 100000.015625,
+    "y_pred": 270722.9375
+  },
+  {
+    "id": 1202,
+    "raw": {
+      "Category": "FOOD_AND_DRINK",
+      "Content Rating": "Everyone",
+      "Genres": "Food & Drink",
+      "Reviews": "22513",
+      "Rating": 3.8,
+      "Size": "11M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 1000000.125,
+    "y_pred": 2579922.75
+  },
+  {
+    "id": 8190,
+    "raw": {
+      "Category": "PERSONALIZATION",
+      "Content Rating": "Teen",
+      "Genres": "Personalization",
+      "Reviews": "42190",
+      "Rating": 4.2,
+      "Size": "11M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 5000000.0,
+    "y_pred": 2737451.75
+  },
+  {
+    "id": 6388,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Entertainment",
+      "Reviews": "160",
+      "Rating": 4.8,
+      "Size": "13M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 10000.0029296875,
+    "y_pred": 1791.0518798828125
+  },
+  {
+    "id": 5943,
+    "raw": {
+      "Category": "FAMILY",
+      "Content Rating": "Everyone",
+      "Genres": "Education",
+      "Reviews": "3",
+      "Rating": NaN,
+      "Size": "4M",
+      "Price": "0",
+      "Type": "Free"
+    },
+    "y_true": 500.0000305175781,
+    "y_pred": 409.5806579589844
+  }
+]

@@ -12,6 +12,13 @@
     .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
     .muted{color:#666}
     .out{white-space:pre-wrap;background:#f8f8f8;padding:12px;border-radius:8px;border:1px solid #eee}
+    .big{font-size:1.4rem;font-weight:700}
+    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#eef;color:#223;border:1px solid #dde}
+    .stats{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:baseline}
+    .stat-label{color:#555}
+    .stat-value{font-weight:600}
+    .delta-pos{color:#0a7}
+    .delta-neg{color:#c33}
   </style>
 </head>
 <body>
@@ -32,6 +39,11 @@
     </div>
     <div style="margin-top:12px">
       <button id="predict">Predict installs</button>
+    </div>
+    <div style="margin-top:12px">
+      <button id="btn-smoke-many" type="button">Next smoke case</button>
+      <div class="muted">Cycles through cases from smoke_large.json.</div>
+      <div id="smoke-many-out" class="out"></div>
     </div>
   </div>
 

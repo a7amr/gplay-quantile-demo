@@ -1,0 +1,15 @@
+{
+  "raw": {
+    "Category": "SPORTS",
+    "Content Rating": "Everyone",
+    "Genres": "Sports",
+    "Reviews": 27.0,
+    "Rating": NaN,
+    "Size": "3.6M",
+    "Price": "0",
+    "Type": "Free",
+    "Last Updated": "October 7, 2017"
+  },
+  "y_true": 49999988.0,
+  "y_pred": 29116156.0
+}

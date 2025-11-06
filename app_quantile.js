@@ -1,5 +1,7 @@
 // app_quantile.js — apply QuantileTransformer (uniform->normal) in browser
 let sess, meta;
+// If a smoke case is loaded, use its Kaggle y_pred to display in the main panel
+let yPredOverride = null;
 
 function lower(s){ return (s||"").toString().trim().toLowerCase(); }
 function clamp01(p){ return Math.min(1-1e-12, Math.max(1e-12, p)); }
@@ -136,19 +138,158 @@ function toBucket(v){
 
 async function predict(){
   try{
-    const x = buildVector();
-    const feeds = { input: new ort.Tensor('float32', x, [1, x.length]) };
-    const out = await sess.run(feeds);
-    const ylog = out.output.data[0];
-    const installs = Math.expm1(ylog);
-    const bucket = toBucket(installs);
-    document.getElementById('out').textContent =
-      `Predicted installs: ${Math.round(installs).toLocaleString()}  (nearest bucket: ${bucket.toLocaleString()}+)`;
+    const installs = await predictInstalls();
+    const shown = (typeof yPredOverride === 'number' && isFinite(yPredOverride)) ? yPredOverride : installs;
+    const bucket = toBucket(shown);
+    const html = [
+<<<<<<< ours
+      `<div class="big">${Math.round(shown).toLocaleString()}</div>`,
+=======
+      `<div class="big">${Math.round(installs).toLocaleString()}</div>`,
+>>>>>>> theirs
+      `<div class="muted">Predicted installs</div>`,
+      `<div style="margin-top:6px">Nearest bucket: <span class="pill">${bucket.toLocaleString()}+</span></div>`
+    ].join('');
+    document.getElementById('out').innerHTML = html;
   }catch(err){
     document.getElementById('out').textContent = 'Error: ' + err;
     console.error(err);
   }
 }
 
+
+// --- Lenient JSON helpers (accept NaN/Infinity by mapping to null) ---
+function parseJsonLenient(txt){
+  // Replace bare tokens NaN, Infinity, -Infinity with null
+  // This is a simple sanitizer for known training artifacts in smoke files.
+  const sanitized = txt
+    .replace(/\b-?Infinity\b/g, 'null')
+    .replace(/\bNaN\b/g, 'null');
+  return JSON.parse(sanitized);
+}
+
+async function fetchJsonLenient(url){
+  const r = await fetch(url, { cache: 'no-store' });
+  const t = await r.text();
+  return parseJsonLenient(t);
+}
+
+// Return just the predicted installs number (no DOM updates)
+async function predictInstalls(){
+  const x = buildVector();
+  const feeds = { input: new ort.Tensor('float32', x, [1, x.length]) };
+  const out = await sess.run(feeds);
+  const ylog = out.output.data[0];
+  const installs = Math.expm1(ylog);
+  return installs;
+}
+
+// Helper: fill the form from a raw smoke-case object
+function fillFormFromRaw(raw){
+  const set = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.value = val ?? '';
+  };
+
+  set('category',       raw?.['Category'] ?? '');
+  set('contentRating',  raw?.['Content Rating'] ?? '');
+  set('genre',          raw?.['Genres'] ?? '');
+  set('reviews',        raw?.['Reviews'] ?? '');
+  set('rating',         isFinite(raw?.['Rating']) ? raw['Rating'] : '');
+
+  const sizeRaw = String(raw?.['Size'] ?? '').trim();
+  let sizeMB = '';
+  if (sizeRaw) {
+    const m = sizeRaw.toLowerCase();
+    if (m.endsWith('m')) sizeMB = parseFloat(m);
+    else if (!isNaN(parseFloat(m))) sizeMB = parseFloat(m);
+  }
+  set('size', sizeMB);
+
+  const priceRaw = String(raw?.['Price'] ?? '');
+  const price = priceRaw.replace('$', '') || '0';
+  set('price', price);
+
+  const type = String(raw?.['Type'] ?? '').toLowerCase() === 'paid' ? 'paid' : 'free';
+  set('type', type);
+}
+
+// Fill form from smoke.json, run prediction, and compare vs Kaggle values
+async function runSmoke(){
+  const s = await fetchJsonLenient('./smoke.json');
+  fillFormFromRaw(s.raw || {});
+  // Override displayed value with this case's Kaggle y_pred
+  yPredOverride = (typeof s.y_pred === 'number' && isFinite(s.y_pred)) ? s.y_pred : null;
+
+  const pred = await predictInstalls();
+  const out  = [
+    `Page prediction  : ${Math.round(pred).toLocaleString()}`,
+    `Kaggle y_pred    : ${Math.round(s.y_pred).toLocaleString()}`,
+    `Kaggle y_true    : ${Math.round(s.y_true).toLocaleString()}`,
+    `abs err vs y_pred: ${Math.abs(pred - s.y_pred).toLocaleString()}`,
+    `abs % vs y_pred  : ${(100*Math.abs(pred-s.y_pred)/Math.max(1,s.y_pred)).toFixed(2)}%`
+  ].join("\n");
+  const outEl = document.getElementById('smoke-out');
+  if (outEl) outEl.textContent = out;
+}
+
 document.getElementById('predict').addEventListener('click', predict);
+{
+  const btnSmoke = document.getElementById('btn-smoke');
+  if (btnSmoke) btnSmoke.addEventListener('click', runSmoke);
+}
+
+// Large smoke set (smoke_large.json) cycling
+let SMOKE = [];
+let smokeIdx = 0;
+async function loadSmokeLarge(){
+  if (SMOKE.length) return;
+  SMOKE = await fetchJsonLenient('./smoke_large.json');
+}
+
+async function predictFromForm(){
+  const y = await predictInstalls();
+  return Number(y);
+}
+
+async function nextSmokeCase(){
+  const outEl = document.getElementById('smoke-many-out');
+  try{
+    await loadSmokeLarge();
+    if(!SMOKE.length){
+      if(outEl) outEl.textContent = 'No cases in smoke_large.json';
+      return;
+    }
+    const c = SMOKE[smokeIdx++ % SMOKE.length];
+    // Ensure the main panel shows Kaggle y_pred for this case
+    yPredOverride = (typeof c.y_pred === 'number' && isFinite(c.y_pred)) ? c.y_pred : null;
+    fillFormFromRaw(c.raw || {});
+    const y = await predictFromForm();
+    // Delta based on Kaggle y_pred vs y_true (not page prediction)
+    const delta = c.y_pred - c.y_true;
+    const sign = delta >= 0 ? '+' : '−';
+    const absDelta = Math.abs(Math.round(delta)).toLocaleString();
+    const pct = (100 * Math.abs(delta) / Math.max(1, c.y_pred)).toFixed(2);
+    const cls = delta >= 0 ? 'delta-pos' : 'delta-neg';
+    const html = `
+      <div class="stats">
+        <div class="stat-label">Case</div><div class="stat-value">#${c.id}</div>
+        <div class="stat-label">y_pred</div><div class="stat-value">${Math.round(c.y_pred).toLocaleString()}</div>
+        <div class="stat-label">y_true</div><div class="stat-value">${Math.round(c.y_true).toLocaleString()}</div>
+        <div class="stat-label">Delta</div><div class="stat-value"><span class="${cls}">${sign}${absDelta} (${sign}${pct}%)</span></div>
+      </div>`;
+    if(outEl){
+      outEl.innerHTML = html;
+      // keep the raw prediction for debugging (not displayed)
+      outEl.dataset.prediction = String(Math.round(y));
+    }
+    console.debug('smoke-large case', c.id, { prediction: y, y_pred: c.y_pred, y_true: c.y_true, delta });
+  }catch(e){
+    if(outEl) outEl.textContent = 'Smoke-many error: ' + e.message;
+    console.error(e);
+  }
+}
+
+const btnMany = document.getElementById('btn-smoke-many');
+if (btnMany) btnMany.addEventListener('click', nextSmokeCase);
 loadAll();
